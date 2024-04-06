@@ -1,6 +1,6 @@
 ## LeetCodeSync - Sync Your LeetCode Code to Google Drive
 
-**LeetCodeSync** is a Chrome extension that solves a common problem faced by LeetCode enthusiasts. With LeetCodeSync, you can seamlessly sync your LeetCode code to your Google Drive, ensuring that your solutions are always accessible and shareable across multiple browsers and devices.
+**LeetCodeSync** is a Chrome extension that solves a problem faced by LeetCode enthusiasts. With LeetCodeSync, you can sync your LeetCode code to your Google Drive, ensuring that your solutions are always accessible and shareable across multiple devices.
 
 This is purely a proof of concept right now as I did not find enough interest to launch it to the chrome web store.
 
