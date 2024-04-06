@@ -1,0 +1,35 @@
+{
+
+    "name": "LeetCodeSync",
+    
+    "description": "Sync your leetcode solutions across multiple browsers and devices",
+    
+    "version": "1.0",
+    
+    "manifest_version": 3,
+
+    "permissions": ["storage","activeTab","tabs","identity","scripting"],
+
+    "oauth2": {
+      "client_id": "<INSERT OAUTH CLIENT ID HERE>",
+      "scopes": [
+        "https://www.googleapis.com/auth/drive"
+      ]
+    },
+
+    "background": {"service_worker": "background.js"},
+    "key" : "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAykDCiaG8YIahetzgikuiHGCIJhxH8iyvEU2vxP7fB5brq0jLpTGCmeuH9+rOdbFSMzzRPIP16rBG7dVzp+YHLpLz9jg7Zs66QQhXBCJsOy9Eh+j8xRrituzbbmJ7vClEv13/zIkpXpcRbmKIayBXLzkI7GBrM9UlLNVCT2trbNZTk0BgEx8cQjHEn7XkTle2EGow3+KAQrwOzxq2+rkjNLC4occucg7dgigTdHuEH9wCREzqTEiaDOXHsplYNNLzDOGUQVbfasNrBgtzU+9JW4QvyEIEUmkltwXkQ1yePE3aHKMxWFC5XsF5SCdclMiZb9i+lIT/v9M4GVEQRGDMhQIDAQAB",
+
+    "action": {
+
+        "default_popup": "popup.html"
+        
+        },
+        "content_scripts": [
+            {
+              "matches": ["https://leetcode.com/*"],
+              "js": ["script.js"]
+            }
+          ]
+    
+    }
