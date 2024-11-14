@@ -1,22 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>LeetCodeSync</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <h2>LeetCodeSync</h2>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SummAIrise</title>
+  <style>
+    /* General body styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Popup container */
+    .popup-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 20px 25px;
+      width: 320px;
+      text-align: center;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .popup-container h2 {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .popup-container p {
+      font-size: 1rem;
+      color: #555;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    /* Selected text display area */
+    #textDisplay {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #333;
+      padding: 12px;
+      background-color: #f9fafb;
+      border-radius: 8px;
+      margin-top: 15px;
+      min-height: 60px;
+      max-height: 120px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Copy button styling */
+    .copy-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 15px;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .copy-button:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+
+    .copy-button:active {
+      background-color: #388e3c;
+    }
+
+    /* Add subtle shadow to popup */
+    .popup-container {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Smooth transitions for all elements */
+    .popup-container, .copy-button {
+      transition: all 0.3s ease;
+    }
+  </style>
 </head>
 <body>
-    <div class="button-container">
-        <button class="btn save-btn" id="save">
-            <i class="fas fa-save"></i>
-            Save
-        </button>
-        <button class="btn restore-btn" id="restore">
-            <i class="fas fa-undo"></i>
-            Restore
-        </button>
-    </div>
-    <script src="script.js"></script>
+  <div class="popup-container">
+    <h2>Summarized Text</h2>
+    <div id="textDisplay">Generating Summary Please Wait...</div>
+    <button class="copy-button" id="copyButton">Copy to Clipboard</button>
+  </div>
+
+  <script src="popup.js"></script>
 </body>
 </html>
